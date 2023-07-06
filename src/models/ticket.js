@@ -14,23 +14,23 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Ticket.init({
-    subject:{ 
-      type:DataTypes.STRING,
-      allowNull:false
-    },
-    content:{
-      type:DataTypes.STRING,
-      allowNull:false
-    },
-    recepientEmail:{
+    subject: {
       type: DataTypes.STRING,
-      allowNull:false
+      allowNull: false
+    },
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    recepientEmail: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     status: {
-      type:DataTypes.ENUM,
-      values:["PENDING", "SUCCESS", "FAILED"],
-      defaultValue:"PENDING",
-      allowNull:false
+      type: DataTypes.ENUM,
+      values: ["PENDING", "SUCCESS", "FAILED"],
+      defaultValue: "PENDING",
+      allowNull: false
     },
   }, {
     sequelize,
